@@ -4,20 +4,27 @@ type props = {
     uf: string
 }
 
-export default function({ uf }: props) {
+export default function ({ uf }: props) {
     const [cidades, setCidades] = useState([])
+    const [loading, setLoading] = useState(true)
 
-    //     async function buscarCidades() {
-    //         const requestCidades = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`)
-    //         const cidades = await requestCidades.json()
-    //         setCidades(cidades)
-    //     }
-    
-    //     buscarCidades() 
+    async function buscarCidades() {
+        setLoading(true)
+        if (!uf) return
+        const requestCidades = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`)
+        const cidades = await requestCidades.json()
+        setLoading(false)
+        setCidades(cidades)
+    }
+
+    useEffect(() => {
+        buscarCidades()
+    }, [uf])
 
     return <>
-        <select>
-            {cidades.map(({ nome }) => <option>{nome}</option>)}
-        </select>
+        {loading
+            ? "loading cidades"
+            : <select>{cidades.map(({ nome }, idx) => <option key={idx}>{nome}</option>)}</select>
+        }
     </>
 }

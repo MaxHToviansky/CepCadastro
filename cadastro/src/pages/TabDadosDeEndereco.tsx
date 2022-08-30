@@ -6,7 +6,7 @@ export default function() {
     const [uf, setUf] = useState("")
 
     return <>
-        <h1>Cadastro: Dados ed Endereço</h1>
+        <h1>Cadastro: Dados de Endereço</h1>
         <InputEstados setUf={setUf} />
         <InputCidades uf={uf} />
     </>
