@@ -1,10 +1,11 @@
+import React from "react"
 import { useEffect, useState } from "react"
+import { EnderecoContext } from "../pages/EnderecoContext"
 
-type props = {
-    uf: string
-}
 
-export default function ({ uf }: props) {
+
+export default function () {
+    const {uf, cidade, setCidade} = React.useContext(EnderecoContext)
     const [cidades, setCidades] = useState([])
     const [loading, setLoading] = useState(true)
 
