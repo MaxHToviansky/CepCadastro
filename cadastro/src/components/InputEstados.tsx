@@ -17,13 +17,11 @@ export default function () {
         if(uf != ""){
         setListado(true)
         console.log(`uf changed to ${uf}`)
-        
         }
         
     },[uf])
-    // TODO - fazer select automaticamente ir para opção de UF do cep
     return <>
-        <select onChange={selecionarEstado}>
+        <select onChange={selecionarEstado} value={uf}>
             {listado ? "" : <option style={{ textAlign: "center" }}>selecione um estado</option>}
             {estados.map(({ sigla, nome }, idx) => <option key={idx} value={sigla}> {sigla} - {nome} </option>)}
         </select>

@@ -25,7 +25,7 @@ export default function () {
     return <>
         {loading
             ? "loading cidades"
-            : <select>{cidades.map(({ nome }, idx) => <option key={idx}>{nome}</option>)}</select>
+            : <select value={cidade}>{cidades.map(({ nome }, idx) => <option key={idx}>{nome}</option>)}</select>
         }
     </>
 }
