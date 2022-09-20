@@ -20,7 +20,7 @@ export default function () {
         
     },[uf])
     return <>
-        <select onChange={selecionarEstado} value={uf}>
+        <select onChange={selecionarEstado} value={uf} id="inputUf">
             {listado ? "" : <option style={{ textAlign: "center" }}>selecione um estado</option>}
             {estados.map(({ sigla, nome }, idx) => <option key={idx} value={sigla}> {sigla} - {nome} </option>)}
         </select>

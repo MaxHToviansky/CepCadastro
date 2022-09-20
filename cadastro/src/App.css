@@ -1,0 +1,70 @@
+
+
+#root{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  margin: auto;
+  --inputColor: rgb(59,59,59);
+}
+
+#imgBandeira{
+  width: 320px;
+  height: 225px;
+  border: 10px solid rgb(51, 51, 51);
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#divDados{
+  width: 340px;
+  height: 530px;
+  margin: auto;
+  background-color: rgb(25,25,25);
+  border-radius: 10px;
+
+}
+
+#inputUf-box{
+  padding: 3px;
+  padding-top: 20px;
+}
+
+#inputUf{
+  height: 30px;
+  width: 320px;
+  background-color: var(--inputColor);
+  border-radius: 1vh;
+}
+
+#inputCid-box{
+  padding: 5px;
+}
+
+#inputCep-box{
+  padding-top: 3px;
+}
+
+#inputCep{
+  background-color: var(--inputColor) ;
+}
+
+#endereco-box{
+  margin: auto;
+  
+  height: 130px;
+  width: 300px;
+  border-radius: 2vh;
+  background-color: rgb(51, 51, 51);
+}
+#legendaEnd{
+  padding: 5px;
+}
+#ruaEnd{
+  padding-bottom: 5px;
+}
+.boldFont{
+  font-weight: bold;
+}

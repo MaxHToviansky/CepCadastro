@@ -9,19 +9,24 @@ import InputEstados from "../components/InputEstados";
 import Endereco from "./Endereco";
 import EnderecoContextdiv from "./EnderecoContext";
 
-export default function () {   
+export default function () {
     return <>
         <EnderecoContextdiv>
-            <h1>Cadastro: Dados de Endereço</h1>
-            <Bandeiras />
-            <div className="UfMuniInput">
-                <InputEstados />
-                <InputCidades />
+            
+                <h1>Cadastro: Dados de Endereço</h1>
+            <div id="divDados">
+                <Bandeiras />
+                <div id="inputUf-box">
+                    <InputEstados />
+                </div>
+                <div id="inputCid-box">
+                    <InputCidades />
+                </div>
+                <div id="inputCep-box">
+                    <InputCep />
+                </div>
+                <Endereco />
             </div>
-            <div className="CepInput">
-                <InputCep />
-            </div>
-            <Endereco/>
         </EnderecoContextdiv>
     </>
 }
