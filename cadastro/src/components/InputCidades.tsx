@@ -24,8 +24,8 @@ export default function () {
 
     return <>
         {loading
-            ? "loading cidades"
-            : <select value={cidade}>{cidades.map(({ nome }, idx) => <option key={idx}>{nome}</option>)}</select>
+            ? <div>Aguardando Estado ou CEP</div>
+            : <div><select value={cidade}>{cidades.map(({ nome }, idx) => <option key={idx}>{nome}</option>)}</select></div>
         }
     </>
 }

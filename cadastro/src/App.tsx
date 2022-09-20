@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import TabDadosDeEndereco from './pages/TabDadosDeEndereco'
 
 export default function () {

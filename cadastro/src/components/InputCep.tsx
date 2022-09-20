@@ -3,7 +3,7 @@ import { useState } from "react";
 import { EnderecoContext } from "../pages/EnderecoContext";
 
 export default function() {
-    const {cep, setCep, rua, setRua, cidade, setCidade, uf, setUf} = React.useContext(EnderecoContext)
+    const {cep, setCep, setRua, setCidade, setUf} = React.useContext(EnderecoContext)
     
     const updateCep = async (ev: React.KeyboardEvent<HTMLInputElement>) => {
         if (ev.currentTarget.value.length < 9) return
@@ -34,11 +34,6 @@ export default function() {
                 }
             }
             />
-        </div>
-        <div className="EnderecoData">
-            <div>{uf}</div>
-            <div>{cidade}</div>
-            <div>{rua}</div>
         </div>
     </>
 }
