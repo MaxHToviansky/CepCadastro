@@ -1,0 +1,2 @@
+POST http://127.0.0.1:8080/api/logged/b4d157b6b71b03544150c2142c53cf7fd26383363019cc9df0ce846071c09ef9f38d7132b54ecc89e2dbbbfa60e6af1f HTTP/1.1
+content-type: application/json
