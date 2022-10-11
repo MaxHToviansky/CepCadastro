@@ -1,6 +1,6 @@
 import React from "react"
 import { useEffect, useState } from "react"
-import { EnderecoContext } from "../pages/EnderecoContext"
+import { EnderecoContext } from "../pages/EnderecoComponents/EnderecoContext"
 
 
 

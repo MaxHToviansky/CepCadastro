@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 
-import Bandeiras from "../components/Bandeiras";
-import InputCep from "../components/InputCep";
-import InputCidades from "../components/InputCidades";
-import InputEstados from "../components/InputEstados";
+import Bandeiras from "../../components/Bandeiras";
+import InputCep from "../../components/InputCep";
+import InputCidades from "../../components/InputCidades";
+import InputEstados from "../../components/InputEstados";
 
 import Endereco from "./Endereco";
 import EnderecoContextdiv from "./EnderecoContext";

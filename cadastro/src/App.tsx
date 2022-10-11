@@ -1,21 +1,22 @@
 import './App.css'
-import TabDadosDeEndereco from './pages/TabDadosDeEndereco'
+import TabDadosDeEndereco from './pages/EnderecoComponents/TabDadosDeEndereco'
+import Login from "./pages/loginComponents/Login"
+import Cadastro from "./pages/loginComponents/Cadastro"
+import Teste from "./pages/loginComponents/Teste"
+import { useState } from 'react'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
-
-function Zeka() {
-  async function testeDeRequisicao() {
-    const req = await fetch("/api")
-    const res = await req.json()
-    console.log(res)
-  }
-
-  return <button onClick={testeDeRequisicao}>Teste</button>
-}
 
 export default function () {
-
   return <>
-    <TabDadosDeEndereco />
-    <Zeka/>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<TabDadosDeEndereco/>}/>
+        <Route path='/Login' element={<Login/>}/> 
+        <Route path='/Cadastro' element={<Cadastro/>}/>
+        <Route path='/teste' element={<Teste/>}/>
+      </Routes>
+      <Link to="/Login">Eita caraio esse é o link</Link>
+    </BrowserRouter>
   </>
 }

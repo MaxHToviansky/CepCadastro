@@ -68,3 +68,8 @@
 .boldFont{
   font-weight: bold;
 }
+
+#loginBox{
+  background-color: var(--inputColor);
+  height: 130px;
+}

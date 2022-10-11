@@ -1,5 +1,5 @@
 import React from "react"
-import { EnderecoContext } from "../pages/EnderecoContext"
+import { EnderecoContext } from "../pages/EnderecoComponents/EnderecoContext"
 import BR from "../assets/Bandeiras/BR.png"
 
 export default function() {

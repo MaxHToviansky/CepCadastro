@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { EnderecoContext } from "../pages/EnderecoContext";
+import { EnderecoContext } from "../pages/EnderecoComponents/EnderecoContext";
 
 export default function () {
     const { cep, setCep, setRua, setCidade, uf, setUf } = React.useContext(EnderecoContext)

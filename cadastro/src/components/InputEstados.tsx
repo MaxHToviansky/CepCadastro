@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { ChangeEvent, Dispatch, SetStateAction, useState } from "react"
-import { EnderecoContext } from "../pages/EnderecoContext"
+import { EnderecoContext } from "../pages/EnderecoComponents/EnderecoContext"
 
 
 
