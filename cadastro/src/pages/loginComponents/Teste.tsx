@@ -21,15 +21,21 @@ export default function () {
   }
 
   return <>
-    <h1>teste</h1>
-    <h2>Buscar dados do Usuário Logado</h2>
-    <div>
-      <label>Nome: </label>{name}
+    <div id="testeBox">
+      <div id="tituloTeste">
+        <h1 className="textoTeste">Teste</h1>
+        <h2 className="textoTeste">Busca de dados do Usuário Logado</h2>
+      </div>
+      <div>
+        <label>Nome: </label>{name}
+      </div>
+      <div>
+        <label>Email: </label>{email}
+      </div>
+      <div id="testeButtonDiv">
+        <button onClick={buscarDados}>Buscar</button>
+        <button onClick={() => navigate("/login")}>Sair</button>
+      </div>
     </div>
-    <div>
-      <label>Email: </label>{email}
-    </div>
-    <button onClick={buscarDados}>buscar</button>
-    <button onClick={() => navigate("/")}>sair</button>
   </>
 }

@@ -24,7 +24,7 @@ export default function () {
     }
 
     const responseData = await request.json()
-    
+
     if (responseData.error) {
       alert(responseData.error)
       return
@@ -34,13 +34,17 @@ export default function () {
   }
 
   return <>
-    <form onSubmit={enviarDados}>
-      <h1>Cadastro</h1>
-      <button onClick={() => navigate("/login") }>Voltar</button>
-      <input name="_name" placeholder="name" />
-      <input name="email" placeholder="email" />
-      <input name="password" type="password" placeholder="password" />
-      <button>cadastrar-se</button>
-    </form>
+    <div id="cadastroBox">
+      <form onSubmit={enviarDados} id="cadastroForm">
+        <h1>Cadastro</h1>
+        <input name="_name" placeholder="name" />
+        <input name="email" placeholder="email" />
+        <input name="password" type="password" placeholder="password" />
+        <div id="cadastroButtonDiv">
+          <button>cadastrar-se</button>
+          <button onClick={() => navigate("/login")}>Voltar</button>
+        </div>
+      </form>
+    </div>
   </>
 }

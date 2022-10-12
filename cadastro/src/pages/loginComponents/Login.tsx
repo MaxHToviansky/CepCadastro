@@ -43,7 +43,7 @@ export default function () {
         <h1>Login</h1>
         <input name="email" placeholder="email" />
         <input name="password" placeholder="password" />
-        <div id="buttonDiv">
+        <div id="loginButtonDiv">
           <button onClick={() => { }}>Entrar</button>
           <button onClick={() => navigate("/cadastro")}>Cadastrar-se</button>
           <button onClick={() => navigate("/teste")}>Teste</button>

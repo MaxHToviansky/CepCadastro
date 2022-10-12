@@ -16,7 +16,6 @@ export default function () {
         <Route path='/Cadastro' element={<Cadastro/>}/>
         <Route path='/teste' element={<Teste/>}/>
       </Routes>
-      <Link to="/Login">Eita caraio esse é o link</Link>
     </BrowserRouter>
   </>
 }
