@@ -43,9 +43,12 @@ export default function () {
         <h1>Login</h1>
         <input name="email" placeholder="email" />
         <input name="password" placeholder="password" />
-        <button onClick={() => navigate("/")}>entrar</button>
-        <button onClick={() => navigate("/cadastro")}>cadastrar-se</button>
-        <button onClick={() => navigate("/teste")}>ir para teste</button>
+        <div id="buttonDiv">
+          <button onClick={() => { }}>Entrar</button>
+          <button onClick={() => navigate("/cadastro")}>Cadastrar-se</button>
+          <button onClick={() => navigate("/teste")}>Teste</button>
+          <button onClick={() => navigate("/")} id="buttonHome">Pagina inicial</button>
+        </div>
       </form>
     </div>
   </>

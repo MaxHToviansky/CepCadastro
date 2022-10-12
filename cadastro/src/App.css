@@ -56,7 +56,7 @@
   
   height: 130px;
   width: 300px;
-  border-radius: 2vh;
+  border-radius: 20px;
   background-color: rgb(51, 51, 51);
 }
 #legendaEnd{
@@ -70,6 +70,33 @@
 }
 
 #loginBox{
-  background-color: var(--inputColor);
-  height: 130px;
+  background-color: rgb(28, 28, 28);
+  height: 240px;
+  border-radius: 20px;
+}
+
+#loginForm{
+  width: 300px;
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+}
+
+#loginForm>h1{
+  margin: 7px;
+}
+
+#loginForm>input{
+  padding: 5px;
+  margin: 5px;
+}
+
+#buttonDiv>button{
+  margin: 5px;
+  padding: 5px;
+
+}
+
+#buttonHome{
+  width: 200px;
 }
