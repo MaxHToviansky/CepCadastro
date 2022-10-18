@@ -41,8 +41,8 @@ export default function () {
         <input name="email" placeholder="email" />
         <input name="password" type="password" placeholder="password" />
         <div id="cadastroButtonDiv">
-          <button>cadastrar-se</button>
-          <button onClick={() => navigate("/login")}>Voltar</button>
+          <button type="submit" >cadastrar-se</button>
+          <button type="button" onClick={() => navigate("/login")}>Voltar</button>
         </div>
       </form>
     </div>

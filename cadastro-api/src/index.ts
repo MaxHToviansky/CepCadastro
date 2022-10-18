@@ -49,12 +49,29 @@ app.get("/api/user/:id", (req, res) => {
 // CREATE
 app.post("/api/user/", (req, res) => {
    const errors = []
+   // const duplicateEmailCheck = 'SELECT EXISTS(SELECT email FROM user WHERE email=?)'
+   // let duplicateEmail = false
+
+
 
    if (!req.body.password)
       errors.push("No password specified")
 
-   if (!req.body.email)
+   if (!req.body.email) {
       errors.push("No email specified")
+   }
+
+   /* database.get(duplicateEmailCheck, [req.body.email], (err, row) => {
+      if (err) {
+         res.status(400).json({ "error": err.message })
+         console.log(err.message)
+         return
+      } 
+      duplicateEmail = JSON.parse(row)
+   })
+
+   if (duplicateEmail)
+      errors.push("Email already has an account!") */
 
    if (errors.length) {
       res.status(400).json({ "error": errors.join() })
@@ -95,7 +112,7 @@ app.patch("/api/user/:id", (req, res) => {
       function (this: RunResult, err) {
          if (err) {
             res.status(400).json({ "error": err.message })
-            return;
+            return
          }
 
          res.json({
@@ -122,22 +139,26 @@ app.delete("/api/user/:id", (req, res) => {
    )
 })
 
+// Login
 app.post("/api/login/", (req, res) => {
    const sql = "SELECT id, name, email FROM user WHERE email=? AND password=?"
    const { email, password } = req.body
 
    database.get(sql, [email, password], (err, row) => {
       if (err) {
-         res.status(400).json({ "error": err.message });
-         return;
+         res.status(400).json({ "error": err.message })
+         return
       }
 
       if (!row?.id) {
          res.status(404).json({ "message": "user not found!" })
          return
       }
-
       require('crypto').randomBytes(48, (err: any, buffer: any) => {
+         if (err) {
+            res.status(400).json({ "error": err.message })
+            return
+         }
          const token = buffer.toString('hex')
          session[token] = row
          res.json({ "message": "success", "sesid": token })
@@ -145,23 +166,9 @@ app.post("/api/login/", (req, res) => {
    })
 })
 
+// Teste sesid
 app.post("/api/logged/:sesid", (req, res) => {
    res.json(session[req.params.sesid] || "nada")
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.listen(port, () => console.log(`⚡ servidor ${port}`))

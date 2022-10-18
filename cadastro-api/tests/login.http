@@ -2,6 +2,6 @@ POST http://127.0.0.1:8080/api/login/ HTTP/1.1
 content-type: application/json
 
 {
-  "email": "user@example.com",
+  "email": "123@123.com",
   "password": "123123"
 }

@@ -24,7 +24,7 @@ export default function () {
     const responseData = await request.json()
 
     if (request.status >= 200 && request.status <= 299) {
-      localStorage.setItem("token", responseData.token)
+      localStorage.setItem("token", responseData.sesid)
       alert("PARABAEINZ!")
       return
     }
@@ -44,10 +44,10 @@ export default function () {
         <input name="email" placeholder="email" />
         <input name="password" placeholder="password" />
         <div id="loginButtonDiv">
-          <button onClick={() => { }}>Entrar</button>
-          <button onClick={() => navigate("/cadastro")}>Cadastrar-se</button>
-          <button onClick={() => navigate("/teste")}>Teste</button>
-          <button onClick={() => navigate("/")} id="buttonHome">Pagina inicial</button>
+          <button type="submit" >Entrar</button>
+          <button type="button" onClick={() => navigate("/cadastro")}>Cadastrar-se</button>
+          <button type="button" onClick={() => navigate("/teste")}>Teste</button>
+          <button type="button" onClick={() => navigate("/")} id="buttonHome">Pagina inicial</button>
         </div>
       </form>
     </div>
