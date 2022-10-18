@@ -8,11 +8,11 @@ export default function () {
 
   const buscarDados: MouseEventHandler<HTMLButtonElement> = async ev => {
     ev.preventDefault()
-    const request = await fetch(`/api/logged/${localStorage.getItem('token')}`, {
+    const request = await fetch(`/api/logged/${sessionStorage.getItem('token')}`, {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        sesid: localStorage.getItem('token')
+        sesid: sessionStorage.getItem('token')
       })
     })
 
@@ -39,7 +39,7 @@ export default function () {
         <label>Email: </label>{email}
       </div>
       <div id="testeButtonDiv">
-        <button  onClick={buscarDados}>Buscar</button>
+        <button onClick={buscarDados}>Buscar</button>
         <button onClick={() => navigate("/login")}>Sair</button>
       </div>
     </div>

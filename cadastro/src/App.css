@@ -71,7 +71,7 @@
 
 #loginBox{
   background-color: rgb(28, 28, 28);
-  height: 240px;
+  height: 270px;
   border-radius: 20px;
 }
 
@@ -151,4 +151,27 @@
 #loginHome{
   margin: 7px;
   padding: 5px;
+}
+
+#updateForm{
+  width: 300px;
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+}
+
+#updateBox{
+  background-color: rgb(28, 28, 28);
+  height: 230px;
+  border-radius: 20px;
+}
+
+#updateForm>input{
+  padding: 5px;
+  margin: 5px;
+}
+
+#updateButtonDiv>button{
+  padding: 5px;
+  margin: 5px;
 }
