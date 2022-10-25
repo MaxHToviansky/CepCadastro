@@ -1,7 +1,7 @@
 import React from "react";
 import { Dispatch, FormEventHandler, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
-
+import Logoff from "./Logoff";
 
 
 export default function () {
@@ -49,6 +49,7 @@ export default function () {
           <button type="button" onClick={() => navigate("/teste")}>Teste</button>
           <button type="button" onClick={() => navigate("/update")}>Alterar Dados</button>
           <button type="button" onClick={() => navigate("/")} id="buttonHome">Pagina inicial</button>
+          <Logoff></Logoff>
         </div>
       </form>
     </div>

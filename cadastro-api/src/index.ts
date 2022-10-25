@@ -171,4 +171,10 @@ app.post("/api/logged/:sesid", (req, res) => {
    res.json(session[req.params.sesid] || "nada")
 })
 
+// Logoff
+
+app.post("/api/logoff/:sesid", (req, res) => {
+   delete session[req.params.sesid]
+   res.json({ "message": "success"})
+})
 app.listen(port, () => console.log(`⚡ servidor ${port}`))
